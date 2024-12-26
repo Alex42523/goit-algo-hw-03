@@ -17,8 +17,8 @@ def get_numbers_ticket(min, max, quantity):
         while len(numbers) <= quantity:
             number = random.randint(min, max)
             numbers.add(number)
-        return sorted(list(numbers))
+        return sorted(numbers)
     else:
-        return "Числа вибрані невірно"
+        return []
 print(get_numbers_ticket(1, 100, 101))
 print(get_numbers_ticket(1, 100, 10))
