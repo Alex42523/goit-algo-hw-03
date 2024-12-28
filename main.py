@@ -11,12 +11,14 @@ def get_days_from_today(date):
 print(get_days_from_today("2021-109"))
 print(get_days_from_today("2021-10-09"))
 def get_numbers_ticket(min, max, quantity):
-    if 1 <= min <= max <= 1000:
+    if 1 <= min <= max <= 1000 and max - min >= quantity:
         numbers = set()
-        while len(numbers) <= quantity:
+        while len(numbers) + 1 <= quantity:
             number = random.randint(min, max)
             numbers.add(number)
         return sorted(numbers)
     else:
         return []
-print(get_numbers_ticket(10, 20, 5))
+print(get_numbers_ticket(10, 20, 10))
+print(get_numbers_ticket(10,14,6))
+print(get_numbers_ticket(5, 10, 3))
