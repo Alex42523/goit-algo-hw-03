@@ -5,8 +5,7 @@ def get_days_from_today(date):
     try:
         date = datetime.strptime(date, "%Y-%m-%d")
     except ValueError:
-        print("Невірний тип дати")
-        return ""
+        return "Невірний тип дати!"
     a = today - date
     return a.days
 print(get_days_from_today("2021-109"))
